@@ -1,0 +1,83 @@
+# TPR Automation Configuration
+
+# General Settings
+project_name: "TPR Automation System"
+organization: "VFS IT"
+
+# Data Paths
+paths:
+  input_data: "data/input"
+  output_data: "data/output"
+  templates: "templates"
+  master_spreadsheet: "data/output/Master_Risk_Tracker.xlsx"
+
+# Risk Management Configuration
+risk_management:
+  # Business areas (will match file names)
+  business_areas:
+    - "Tech Lead 1"
+    - "Tech Lead 2"
+    - "Tech Lead 3"
+    - "Tech Lead 4"
+    - "Tech Lead 5"
+  
+  # File naming pattern
+  file_pattern: "Operational Risk Assessment - {business_area}.xlsx"
+  
+  # Risk categories
+  categories:
+    - "Resources"
+    - "Cyber"
+    - "Stability"
+    - "Delivery"
+    - "Budget"
+    - "3rd Party"
+  
+  # Priority levels
+  priorities:
+    - "High"
+    - "Medium"
+    - "Low"
+  
+  # Risk statuses
+  statuses:
+    - "Open"
+    - "Closed"
+  
+  # Chart configuration
+  charts:
+    stacked_bar:
+      title: "Open Risks Priorities per Business Area"
+      filename: "risk_priorities_stacked_bar.png"
+      width: 10
+      height: 6
+    
+    pie_status:
+      title: "Operational Risk Statuses"
+      filename: "risk_statuses_pie.png"
+      width: 8
+      height: 6
+    
+    pie_categories:
+      title: "% Split Open Risk Categories"
+      filename: "risk_categories_pie.png"
+      width: 8
+      height: 6
+
+# PowerPoint Settings
+powerpoint:
+  template_file: "TPR_Template.pptx"
+  output_file: "TPR_Report_{month}_{year}.pptx"
+  risk_slide_number: 5  # Adjust to your actual slide number
+
+# Email Settings (for future use)
+email:
+  smtp_server: "smtp.office365.com"
+  smtp_port: 587
+  sender_email: ""  # To be configured
+  reminder_days: [7, 2]  # Send reminders 7 days and 2 days before deadline
+
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/tpr_automation.log"

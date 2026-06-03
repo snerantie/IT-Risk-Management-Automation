@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+
+# Output files
+data/output/*
+!data/output/.gitkeep
+
+# Input files (users will add their own)
+data/input/risk/*.xlsx
+data/input/risk/*.xls
+!data/input/risk/.gitkeep
+
+# PowerPoint templates (users will add their own)
+templates/*.pptx
+!templates/.gitkeep
+!templates/README.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+~$*
+
+# Environment variables
+.env
